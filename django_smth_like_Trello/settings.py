@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
+
+    'apps.cars',
+    'apps.rest_net',
 ]
 
 MIDDLEWARE = [
@@ -77,8 +79,18 @@ WSGI_APPLICATION = 'django_smth_like_Trello.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_orm',
+        'USER': 'django_orm',
+        'PASSWORD': 'qwer1234',
+        'HOST': 'localhost',
+        'PORT': 5432,
+        'TEST': {
+            'HOST': 'localhost',
+            'PORT': 5432,
+            'NAME': 'car_dealer_test_db',
+            'USER': 'car_dealer_dev',
+        }
     }
 }
 
