@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class RestNetConfig(AppConfig):
+class OrdersConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.rest_net'
+    name = 'apps.orders'
